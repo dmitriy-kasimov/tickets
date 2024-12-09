@@ -1,0 +1,7 @@
+@use 'classes/text_size';
+@use 'classes/text_color';
+@use 'classes/text_align';
+
+.bold {
+    font-weight: 700;
+}
