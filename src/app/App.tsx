@@ -1,24 +1,23 @@
 import './styles/index.scss'
 import { FullWidthWrapper } from '@/shared/ui-kit/FullWidthWrapper'
 import { MainLayout } from '@/shared/layouts/MainLayout'
-import { Tabs, TabType } from '@/shared/ui-kit/Tabs'
-import { useState } from 'react'
+import { Ticket } from '@/entities/Ticket/ui/Ticket.tsx'
+import { TicketType } from '@/entities/Ticket/model/types/TicketProps.ts'
 
-const tabs: TabType[] = [
-    { value: 'rub', label: 'RUB' },
-    { value: 'usd', label: 'USD' },
-    { value: 'eur', label: 'EUR' }
-]
+const ticket: TicketType = {
+    departure: { date: '2024-12-10T16:18:06+0000', town: 'WO, Владивосток' },
+    arrival: { date: '2024-12-10T16:18:06+0000', town: 'Тель-Авив, TLV' },
+    countTransfers: 1,
+    price: '21032 P',
+    linkCompanyLogo: 'https://toplogos.ru/images/logo-oak.png'
+}
 
 function App() {
-    const [activeTab, setActiveTab] = useState<string>('rub')
-
     return (
         <div className={'app'}>
             <MainLayout>
                 <FullWidthWrapper>
-                    <>Hello world!</>
-                    <Tabs tabs={tabs} activeTab={activeTab} onClickTab={setActiveTab} />
+                    <Ticket ticket={ticket} />
                 </FullWidthWrapper>
             </MainLayout>
         </div>
