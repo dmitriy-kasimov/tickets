@@ -1,5 +1,8 @@
-import { ReactNode } from 'react'
+import { ReactElement } from 'react'
 
 export type MainLayoutProps = {
-    children: ReactNode
+    header: ReactElement
+    content: ReactElement
+    sidebar: ReactElement
+    toolbar?: ReactElement
 }

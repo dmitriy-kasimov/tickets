@@ -1,8 +1,8 @@
 import './styles/index.scss'
-import { FullWidthWrapper } from '@/shared/ui-kit/FullWidthWrapper'
 import { MainLayout } from '@/shared/layouts/MainLayout'
 import { Ticket } from '@/entities/Ticket/ui/Ticket.tsx'
 import { TicketType } from '@/entities/Ticket/model/types/TicketProps.ts'
+import { Suspense } from 'react'
 
 const ticket: TicketType = {
     departure: { date: '2018-10-09T06:25:00+0000', town: 'WO, Владивосток' },
@@ -15,11 +15,14 @@ const ticket: TicketType = {
 function App() {
     return (
         <div className={'app'}>
-            <MainLayout>
-                <FullWidthWrapper>
-                    <Ticket ticket={ticket} />
-                </FullWidthWrapper>
-            </MainLayout>
+            <Suspense fallback={'Loading app...'}>
+                <MainLayout
+                    header={<>header</>}
+                    content={<Ticket ticket={ticket} />}
+                    sidebar={<>sidebar</>}
+                    toolbar={<>toolbar</>}
+                />
+            </Suspense>
         </div>
     )
 }
