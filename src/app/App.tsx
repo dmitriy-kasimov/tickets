@@ -5,8 +5,8 @@ import { Ticket } from '@/entities/Ticket/ui/Ticket.tsx'
 import { TicketType } from '@/entities/Ticket/model/types/TicketProps.ts'
 
 const ticket: TicketType = {
-    departure: { date: '2024-12-10T16:18:06+0000', town: 'WO, Владивосток' },
-    arrival: { date: '2024-12-10T16:18:06+0000', town: 'Тель-Авив, TLV' },
+    departure: { date: '2018-10-09T06:25:00+0000', town: 'WO, Владивосток' },
+    arrival: { date: '2018-10-10T08:45:00+0000', town: 'Тель-Авив, TLV' },
     countTransfers: 1,
     price: '21032 P',
     linkCompanyLogo: 'https://toplogos.ru/images/logo-oak.png'
