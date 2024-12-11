@@ -5,13 +5,22 @@ import { Card } from '@/shared/ui-kit/Card'
 
 export const TicketsFeedFallback: FC = () => {
     return (
-        <Card padding={'m'}>
-            <VStack gap={'8'}>
+        <VStack gap={'8'}>
+            <Card>
                 <Skeleton width={663} height={160} border={'8px'} />
+            </Card>
+            <Card>
                 <Skeleton width={663} height={160} border={'8px'} />
+            </Card>
+            <Card>
                 <Skeleton width={663} height={160} border={'8px'} />
+            </Card>
+            <Card>
                 <Skeleton width={663} height={160} border={'8px'} />
-            </VStack>
-        </Card>
+            </Card>
+            <Card>
+                <Skeleton width={663} height={160} border={'8px'} />
+            </Card>
+        </VStack>
     )
 }

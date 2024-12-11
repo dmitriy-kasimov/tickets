@@ -16,7 +16,7 @@ export const TicketLocationBLock: FC<TicketLocationBLockProps> = ({ location }) 
             <Text size={'l'}>{time}</Text>
             <VStack>
                 <Text noWrap>{location.town}</Text>
-                <Text noWrap color={'secondary'}>
+                <Text noWrap color={'secondary'} size={'s'}>
                     {date}
                 </Text>
             </VStack>

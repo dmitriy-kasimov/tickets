@@ -18,7 +18,11 @@ export const TicketLocationInfo: FC<TicketLocationInfoProps> = ({ ticket }) => {
             <HStack align={'center'} gap={'8'}>
                 <TicketLocationBLock location={ticket.departure} />
                 <VStack align={'center'}>
-                    <Text color={'secondary'}>{ticket.countTransfers} пересадки</Text>
+                    <Text color={'secondary'} size={'s'}>
+                        {ticket.countTransfers
+                            ? `Пересадки: ${ticket.countTransfers}`
+                            : 'Без пересадок'}
+                    </Text>
                     <Icon />
                 </VStack>
                 <TicketLocationBLock location={ticket.arrival} />
