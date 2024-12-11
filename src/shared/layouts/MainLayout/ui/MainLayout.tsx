@@ -3,17 +3,13 @@ import { MainLayoutProps } from '@/shared/layouts/MainLayout/types/MainLayoutPro
 
 import cls from './MainLayout.module.scss'
 
-import { classNames } from '@/shared/lib/classNames/classNames.ts'
+import { VStack } from '@/shared/ui-kit/Stack'
 
-export const MainLayout: FC<MainLayoutProps> = memo(({ header, content, sidebar, toolbar }) => {
+export const MainLayout: FC<MainLayoutProps> = memo(({ header, content }) => {
     return (
-        <div className={classNames(cls.MainLayout, {}, [])}>
+        <VStack className={cls.MainLayout} gap={'16'} max align={'center'}>
+            <div className={cls.header}>{header}</div>
             <div className={cls.content}>{content}</div>
-            <div className={cls.sidebar}>{sidebar}</div>
-            <div className={cls.rightbar}>
-                <div className={cls.header}>{header}</div>
-                <div className={cls.toolbar}>{toolbar}</div>
-            </div>
-        </div>
+        </VStack>
     )
 })

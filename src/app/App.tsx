@@ -3,6 +3,7 @@ import { MainLayout } from '@/shared/layouts/MainLayout'
 import { Ticket } from '@/entities/Ticket/ui/Ticket.tsx'
 import { TicketType } from '@/entities/Ticket/model/types/TicketProps.ts'
 import { Suspense } from 'react'
+import { Navbar } from '@/widgets/Navbar'
 
 const ticket: TicketType = {
     departure: { date: '2018-10-09T06:25:00+0000', town: 'WO, Владивосток' },
@@ -16,12 +17,7 @@ function App() {
     return (
         <div className={'app'}>
             <Suspense fallback={'Loading app...'}>
-                <MainLayout
-                    header={<>header</>}
-                    content={<Ticket ticket={ticket} />}
-                    sidebar={<>sidebar</>}
-                    toolbar={<>toolbar</>}
-                />
+                <MainLayout header={<Navbar />} content={<Ticket ticket={ticket} />} />
             </Suspense>
         </div>
     )
