@@ -6,7 +6,7 @@ import { TransfersBlock } from '@/features/FilterOfTickets/ui/TransfersBlock.tsx
 import { createSearchParams, useLocation, useNavigate } from 'react-router-dom'
 
 export const FilterOfTickets: FC = () => {
-    const [currency, setCurrency] = useState<CurrencyType>('rub')
+    const [currency, setCurrency] = useState<CurrencyType>('RUB')
     const [transfers, setTransfers] = useState<boolean[]>(new Array(4).fill(false))
 
     const { pathname } = useLocation()

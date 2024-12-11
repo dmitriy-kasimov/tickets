@@ -3,9 +3,9 @@ import { Tabs, TabType } from '@/shared/ui-kit/Tabs'
 import { CurrencySelectorProps, CurrencyType } from '../model/types/CurrencySelectorProps.ts'
 
 const currency: TabType[] = [
-    { value: 'rub', label: 'RUB' },
-    { value: 'usd', label: 'USD' },
-    { value: 'eur', label: 'EUR' }
+    { value: 'RUB', label: 'RUB' },
+    { value: 'USD', label: 'USD' },
+    { value: 'EUR', label: 'EUR' }
 ]
 export const CurrencySelector: FC<CurrencySelectorProps> = ({
     selectedCurrency,

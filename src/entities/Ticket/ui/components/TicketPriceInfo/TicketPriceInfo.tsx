@@ -6,11 +6,21 @@ import { Button } from '@/shared/ui-kit/Button'
 import { Text } from '@/shared/ui-kit/Text'
 import { TicketType } from '@/entities/Ticket/model/types/TicketProps.ts'
 import { Skeleton } from '@/shared/ui-kit/Skeleton'
+import { useSearchParams } from 'react-router-dom'
+import { CurrencyType, LocalesByCurrency } from '@/entities/CurrencySelector'
 
 type TicketPriceInfoProps = {
     ticket: TicketType
 }
 export const TicketPriceInfo: FC<TicketPriceInfoProps> = ({ ticket }) => {
+    const [URLSearchParams] = useSearchParams()
+    const currency: CurrencyType = URLSearchParams.get('currency') as CurrencyType
+
+    const sum = new Intl.NumberFormat(LocalesByCurrency[currency], {
+        style: 'currency',
+        currency: currency
+    }).format(ticket.price)
+
     return (
         <VStack className={cls.PriceBlock} align={'center'} gap={'8'}>
             <AppImage
@@ -21,7 +31,7 @@ export const TicketPriceInfo: FC<TicketPriceInfoProps> = ({ ticket }) => {
 
             <Button fillVariant={'primary'}>
                 <Text color={'main-inverted'} noWrap>
-                    Купить за {ticket.price}
+                    Купить за {sum}
                 </Text>
             </Button>
         </VStack>

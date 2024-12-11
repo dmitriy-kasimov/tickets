@@ -7,7 +7,7 @@ export type TicketType = {
     departure: TicketLocationType
     arrival: TicketLocationType
     countTransfers: number
-    price: string
+    price: number
     linkCompanyLogo?: string
 }
 

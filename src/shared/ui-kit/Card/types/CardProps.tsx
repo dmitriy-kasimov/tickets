@@ -6,4 +6,5 @@ export type CardProps = {
     children: ReactNode
     padding?: CardPadding
     fullWidth?: boolean
+    className?: string
 }
