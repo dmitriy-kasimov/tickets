@@ -6,6 +6,7 @@ import { CurrencyType } from '@/entities/CurrencySelector'
 import { Tickets as TicketsFeed } from '@/features/Tickets'
 import { TicketType } from '@/entities/Ticket'
 import { Text } from '@/shared/ui-kit/Text'
+import { HStack } from '@/shared/ui-kit/Stack'
 
 export const Tickets: FC = () => {
     const [URLSearchParams] = useSearchParams()
@@ -30,7 +31,21 @@ export const Tickets: FC = () => {
     }, [currency, transfers])
 
     if (isLoading) return <TicketsFeedFallback />
-    if (error) return <Text>{error}</Text>
-    if (!result.length) return <Text>Не удалось найти билетов по указаннм параметрам</Text>
+    if (error)
+        return (
+            <HStack max justify={'center'}>
+                <Text align={'center'} as={'h3'} color={'error'} size={'l'}>
+                    {error}
+                </Text>
+            </HStack>
+        )
+    if (!result.length)
+        return (
+            <HStack max justify={'center'}>
+                <Text align={'center'} as={'h3'} color={'error'} size={'l'}>
+                    По указанным параметрам не нашлось билетов
+                </Text>
+            </HStack>
+        )
     return <TicketsFeed tickets={result} />
 }

@@ -5,10 +5,12 @@ import { VStack } from '@/shared/ui-kit/Stack'
 
 export const Tickets: FC<TicketsProps> = ({ tickets }) => {
     return (
-        <VStack gap={'8'}>
-            {tickets.map(ticket => (
-                <Ticket key={ticket.id} ticket={ticket} />
-            ))}
-        </VStack>
+        <article>
+            <VStack gap={'8'}>
+                {tickets.map(ticket => (
+                    <Ticket key={ticket.id} ticket={ticket} />
+                ))}
+            </VStack>
+        </article>
     )
 }

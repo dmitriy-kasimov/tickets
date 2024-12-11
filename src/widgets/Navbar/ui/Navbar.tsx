@@ -5,7 +5,9 @@ import { Text } from '@/shared/ui-kit/Text'
 export const Navbar: FC = memo(() => {
     return (
         <Card fullWidth padding={'m'}>
-            <Text size={'xl'}>Navbar</Text>
+            <Text size={'xl'} as={'h1'}>
+                авиасейлс
+            </Text>
         </Card>
     )
 })

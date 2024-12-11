@@ -6,8 +6,10 @@ import cls from './Filter.module.scss'
 
 export const Filter: FC = () => {
     return (
-        <Card padding={'m'} className={cls.Filter}>
-            <FilterOfTickets />
-        </Card>
+        <aside className={cls.Filter}>
+            <Card padding={'m'}>
+                <FilterOfTickets />
+            </Card>
+        </aside>
     )
 }

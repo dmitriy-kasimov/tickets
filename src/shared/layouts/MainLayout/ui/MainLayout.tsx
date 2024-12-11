@@ -9,11 +9,11 @@ import { ScrollToTopButton } from '@/features/scrollToTopButton'
 export const MainLayout: FC<MainLayoutProps> = memo(({ header, content }) => {
     return (
         <VStack className={cls.MainLayout} gap={'16'} max align={'center'}>
-            <div className={cls.header}>{header}</div>
-            <div className={cls.content}>{content}</div>
-            <div className={cls.toolBar}>
+            <header className={cls.header}>{header}</header>
+            <main className={cls.content}>{content}</main>
+            <aside className={cls.toolBar}>
                 <ScrollToTopButton />
-            </div>
+            </aside>
         </VStack>
     )
 })

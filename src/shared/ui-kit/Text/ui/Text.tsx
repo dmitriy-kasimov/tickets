@@ -6,7 +6,7 @@ import { classNames } from '@/shared/lib/classNames/classNames.ts'
 type textSize = 's' | 'm' | 'l' | 'xl'
 
 // Типы шрифтов по цвету
-type textColor = 'main' | 'main-inverted' | 'brand' | 'secondary'
+type textColor = 'main' | 'main-inverted' | 'brand' | 'secondary' | 'error'
 
 type textAlign = 'left' | 'center' | 'right'
 

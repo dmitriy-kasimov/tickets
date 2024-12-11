@@ -24,14 +24,18 @@ export const FilterOfTickets: FC = () => {
     return (
         <VStack gap={'16'}>
             <VStack gap={'8'}>
-                <Text size={'l'}>ВАЛЮТА</Text>
+                <Text size={'l'} as={'h2'}>
+                    ВАЛЮТА
+                </Text>
                 <CurrencySelector
                     selectedCurrency={currency}
                     onSelectAnotherCurrency={setCurrency}
                 />
             </VStack>
             <VStack gap={'8'}>
-                <Text size={'l'}>КОЛИЧЕСТВО ПЕРЕСАДОК</Text>
+                <Text size={'l'} as={'h2'}>
+                    КОЛИЧЕСТВО ПЕРЕСАДОК
+                </Text>
                 <TransfersBlock checks={transfers} setChecks={setTransfers} />
             </VStack>
         </VStack>

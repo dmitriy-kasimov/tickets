@@ -7,9 +7,11 @@ import { TicketPriceInfo } from '@/entities/Ticket/ui/components/TicketPriceInfo
 
 export const Ticket: FC<TicketProps> = ({ ticket }) => {
     return (
-        <Card>
-            <TicketPriceInfo ticket={ticket} />
-            <TicketLocationInfo ticket={ticket} />
-        </Card>
+        <section>
+            <Card>
+                <TicketPriceInfo ticket={ticket} />
+                <TicketLocationInfo ticket={ticket} />
+            </Card>
+        </section>
     )
 }
