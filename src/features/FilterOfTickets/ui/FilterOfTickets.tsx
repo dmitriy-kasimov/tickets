@@ -33,7 +33,7 @@ export const FilterOfTickets: FC = () => {
                 />
             </VStack>
             <VStack gap={'8'}>
-                <Text size={'l'} as={'h2'}>
+                <Text size={'l'} as={'h2'} noWrap>
                     КОЛИЧЕСТВО ПЕРЕСАДОК
                 </Text>
                 <TransfersBlock checks={transfers} setChecks={setTransfers} />
