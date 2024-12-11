@@ -5,7 +5,7 @@ import { Text } from '@/shared/ui-kit/Text'
 export const Navbar: FC = () => {
     return (
         <Card fullWidth padding={'m'}>
-            <Text>Navbar</Text>
+            <Text size={'xl'}>Navbar</Text>
         </Card>
     )
 }

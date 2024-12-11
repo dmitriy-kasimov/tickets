@@ -33,7 +33,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = props => {
 
     return (
         <VStack gap={'4'}>
-            <HStack gap={'8'}>
+            <HStack gap={'4'}>
                 <Checkbox
                     notDefined={checks.includes(true) && checks.includes(false)}
                     id={'all'}
