@@ -1,9 +1,15 @@
 .MainLayout {
   min-height: 100vh;
+  padding: 0.5rem 0;
 }
 
 .header,
 .content {
   max-width: 1200px;
   width: 100%;
+}
+
+.header{
+  top: 0;
+  position: sticky;
 }
