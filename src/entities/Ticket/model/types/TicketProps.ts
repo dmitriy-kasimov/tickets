@@ -3,6 +3,7 @@ export type TicketLocationType = {
     town: string
 }
 export type TicketType = {
+    id: string
     departure: TicketLocationType
     arrival: TicketLocationType
     countTransfers: number
