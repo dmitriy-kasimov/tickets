@@ -46,7 +46,7 @@ export const Tickets: FC = () => {
         return (
             <HStack max justify={'center'}>
                 <Text align={'center'} as={'h3'} color={'error'} size={'l'}>
-                    По указанным параметрам не нашлось билетов
+                    {t('По указанным параметрам не нашлось билетов')}
                 </Text>
             </HStack>
         )
