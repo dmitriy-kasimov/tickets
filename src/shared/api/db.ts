@@ -3,7 +3,7 @@ export const db = [
         id: '0',
         departure: { date: '2018-10-09T06:25:00+0000', town: 'WO, Владивосток' },
         arrival: { date: '2018-10-10T08:45:00+0000', town: 'Тель-Авив, TLV' },
-        countTransfers: 1,
+        countTransfers: 0,
         RUB: 21032,
         USD: 21033,
         EUR: 21034,

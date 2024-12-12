@@ -8,6 +8,7 @@ import { TicketType } from '@/entities/Ticket/model/types/TicketProps.ts'
 import { Skeleton } from '@/shared/ui-kit/Skeleton'
 import { useSearchParams } from 'react-router-dom'
 import { CurrencyType, LocalesByCurrency } from '@/entities/CurrencySelector'
+import { useTranslation } from 'react-i18next'
 
 type TicketPriceInfoProps = {
     ticket: TicketType
@@ -21,6 +22,8 @@ export const TicketPriceInfo: FC<TicketPriceInfoProps> = ({ ticket }) => {
         currency: currency
     }).format(ticket.price)
 
+    const { t } = useTranslation()
+
     return (
         <VStack className={cls.PriceBlock} align={'center'} gap={'8'}>
             <AppImage
@@ -31,7 +34,7 @@ export const TicketPriceInfo: FC<TicketPriceInfoProps> = ({ ticket }) => {
 
             <Button fillVariant={'primary'}>
                 <Text color={'main-inverted'} noWrap>
-                    Купить за {sum}
+                    {`${t('Купить за')} ${sum}`}
                 </Text>
             </Button>
         </VStack>

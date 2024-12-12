@@ -7,6 +7,7 @@ import { Tickets as TicketsFeed } from '@/features/Tickets'
 import { TicketType } from '@/entities/Ticket'
 import { Text } from '@/shared/ui-kit/Text'
 import { HStack } from '@/shared/ui-kit/Stack'
+import { useTranslation } from 'react-i18next'
 
 export const Tickets: FC = () => {
     const [URLSearchParams] = useSearchParams()
@@ -16,6 +17,8 @@ export const Tickets: FC = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true)
     const [result, setResult] = useState<TicketType[]>([])
     const [error, setError] = useState<string>('')
+
+    const { t } = useTranslation()
 
     useEffect(() => {
         setIsLoading(true)
@@ -35,7 +38,7 @@ export const Tickets: FC = () => {
         return (
             <HStack max justify={'center'}>
                 <Text align={'center'} as={'h3'} color={'error'} size={'l'}>
-                    {error}
+                    {t('Сервер временно недоступен')}
                 </Text>
             </HStack>
         )

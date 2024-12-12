@@ -10,6 +10,7 @@ import { changeCheck } from '../model/helpers/changeCheck.ts'
 import { changeAllChecks } from '../model/helpers/changeAllChecks.ts'
 
 import cls from './CheckboxGroup.module.scss'
+import { useTranslation } from 'react-i18next'
 
 export const CheckboxGroup: FC<CheckboxGroupProps> = props => {
     const { options, checks, setChecks } = props
@@ -31,6 +32,8 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = props => {
         else setAll(false)
     }, [checks])
 
+    const { t } = useTranslation()
+
     return (
         <VStack gap={'4'}>
             <HStack gap={'4'}>
@@ -40,7 +43,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = props => {
                     checked={all}
                     onChange={switchAll}
                 />
-                <Text>Все</Text>
+                <Text>{t('Все')}</Text>
             </HStack>
             <VStack gap={'4'} className={cls.CheckboxGroup}>
                 {options.map((option, index) => (

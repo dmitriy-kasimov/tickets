@@ -1,0 +1,15 @@
+{
+  "ВАЛЮТА": "CURRENCY",
+  "КОЛИЧЕСТВО ПЕРЕСАДОК": "COUNT OF TRANSFERS",
+  "Все": "All",
+  "Без пересадок": "Without transfers",
+  "1 пересадка": "1 transfer",
+  "2 пересадки": "2 transfers",
+  "3 пересадки": "3 transfers",
+  "Купить за": "Buy for",
+  "{{count}} пересадок_zero": "Without transfers",
+  "{{count}} пересадок_one": "{{count}} transfer",
+  "{{count}} пересадок_other": "{{count}} transfers",
+  "По указанным параметрам не нашлось билетов": "There were no tickets for the specified parameters",
+  "Сервер временно недоступен": "The server is temporarily unavailable"
+}

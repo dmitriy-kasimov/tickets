@@ -1,21 +1,21 @@
 export class FormatDate {
-    public static formatDate(date: string) {
+    public static formatDate(date: string, locales = 'ru') {
         const convertedDate = new Date(date)
-        const dayOfWeek = new Intl.DateTimeFormat('ru-RU', { weekday: 'short' }).format(
+        const dayOfWeek = new Intl.DateTimeFormat(locales, { weekday: 'short' }).format(
             convertedDate
         )
-        const month = new Intl.DateTimeFormat('ru-RU', { month: 'short' }).format(convertedDate)
+        const month = new Intl.DateTimeFormat(locales, { month: 'short' }).format(convertedDate)
         const day = convertedDate.getDate()
         const year = convertedDate.getFullYear()
 
         return `${day} ${month} ${year}, ${dayOfWeek}`
     }
 
-    public static formatTime(date: string) {
+    public static formatTime(date: string, locales = 'ru') {
         const convertedDate = new Date(date)
 
-        const hours = new Intl.DateTimeFormat('ru-RU', { hour: '2-digit' }).format(convertedDate)
-        const minutes = new Intl.DateTimeFormat('ru-RU', { minute: '2-digit' }).format(
+        const hours = new Intl.DateTimeFormat(locales, { hour: '2-digit' }).format(convertedDate)
+        const minutes = new Intl.DateTimeFormat(locales, { minute: '2-digit' }).format(
             convertedDate
         )
 

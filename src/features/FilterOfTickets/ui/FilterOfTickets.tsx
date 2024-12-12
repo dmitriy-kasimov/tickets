@@ -4,6 +4,7 @@ import { Text } from '@/shared/ui-kit/Text'
 import { CurrencySelector, CurrencyType } from '@/entities/CurrencySelector'
 import { TransfersBlock } from '@/features/FilterOfTickets/ui/TransfersBlock.tsx'
 import { createSearchParams, useLocation, useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 export const FilterOfTickets: FC = () => {
     const [currency, setCurrency] = useState<CurrencyType>('RUB')
@@ -21,11 +22,13 @@ export const FilterOfTickets: FC = () => {
         })
     }, [currency, transfers])
 
+    const { t } = useTranslation()
+
     return (
         <VStack gap={'16'}>
             <VStack gap={'8'}>
                 <Text size={'l'} as={'h2'}>
-                    ВАЛЮТА
+                    {t('ВАЛЮТА')}
                 </Text>
                 <CurrencySelector
                     selectedCurrency={currency}
@@ -34,7 +37,7 @@ export const FilterOfTickets: FC = () => {
             </VStack>
             <VStack gap={'8'}>
                 <Text size={'l'} as={'h2'} noWrap>
-                    КОЛИЧЕСТВО ПЕРЕСАДОК
+                    {t('КОЛИЧЕСТВО ПЕРЕСАДОК')}
                 </Text>
                 <TransfersBlock checks={transfers} setChecks={setTransfers} />
             </VStack>
