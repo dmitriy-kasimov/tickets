@@ -1,0 +1,32 @@
+.Card{
+  display: inline-flex;
+  border: none;
+  outline: none;
+  background-color: var(--color-bg);
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 30%);
+}
+
+.none {
+  padding: 0;
+}
+
+.xxs{
+  padding: 2px;
+}
+
+.xs{
+  padding: 4px;
+}
+
+.s{
+  padding: 8px;
+}
+
+.m{
+  padding: 16px;
+}
+
+.fullWidth{
+  width: 100%
+}
